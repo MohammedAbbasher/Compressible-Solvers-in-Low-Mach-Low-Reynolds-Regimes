@@ -1,0 +1,15 @@
+Note: The SU2 software was run using Windows Subsystem for Linux (WSL).
+1.To run a case (for example, the first case), please copy the files 'lam_cylinder_unsteady_trial_1' and 'mesh_cylinder_lam' to a new folder.
+2. Change the working directory to the new location where the case file was copied, i.e where 'lam_cylinder_unsteady_case_1' is.
+3.Before running a new simulation, ensure that no files remain from a previous run. To clean the directory, execute the following bash script:
+	bash clean.sh
+Note: The 'clean.sh' script is located in the Cases folder. You need to copy this script into the directory where you intend to run the case.
+
+3.To excute the code, use the following command:
+	SU2_CFD lam_cylinder_unsteady_trial_1.cfg
+
+4.The lift and drag coefficients (Cₗ and Cᴅ) can be generated at any time during the simulation by running the Python script Force_Coefficients.py:
+	python3 Force_Coefficient.py
+
+Note: In this case, Python 3 was used. Other Python versions may also be used, provided they are compatible with the script.
+      The Force_Coefficient.py script is located in the Cases folder. You must either copy this script into the working directory or modify the directory path inside the script to point to the location of the history file.
