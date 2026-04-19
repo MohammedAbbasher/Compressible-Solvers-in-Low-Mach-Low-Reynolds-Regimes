@@ -1,0 +1,14 @@
+1.Place the input file and the mesh file in the same directory as the executable (isaac.exe) — i.e., the directory where the executable was created after running make.
+In this case:
+Input file: [NACA0012_Re_10000.dat]
+Mesh file: [medium_zero_double.grd]
+
+2.Open a terminal and navigate to the directory containing isaac.exe, the input file, and the mesh file before running the simulation.
+
+3.To run the simulation execute the following command:
+./isaac <NACA0012_Re_10000.dat> output
+
+where:
+-isaac is the executable
+-NACA0012_Re_10000.dat is the input file
+-output is the file where the program output (log/results) will be written

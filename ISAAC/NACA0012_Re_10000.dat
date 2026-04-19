@@ -1,0 +1,40 @@
+'RESTART OUT'   1
+     'NACA0012_Re_10000.rst1'
+'PLOT3D'  1
+     'FORMATTED'
+     'NACA0012_Re_10000'
+'NAVIER STOKES'       1   
+'MACH'       2.9e-3
+'RE'         10000
+'ALPHA'      0
+'KAPPA'      0.3333333333E0
+'LIMIT'      3
+'NITS'       500
+'DT' 	     0.000001
+'TWOD'       1
+'SOLVER'     1
+	'RK' 1
+'BLOCK'      1
+     'DIMENSIONS'       1
+           601      301       2
+     'VISCOUS'	   2
+     		1  2  
+     'FLUX'    1
+          'ROE'        1
+     'GRID'       1
+          'medium_zero_double.grd'
+     'BC'         8	  
+          'BC'       1   1    1     601  1   2   'FARFIELD'
+          'BC'       201  301   1      301   301   2   'WALL'
+          'BC'       301  301   1      201   301   2   'WALL'
+          'BC'       1    1    1     1   301    2   'EXTRAPOLATE'
+          'BC'       1    301    1     601   301    2   'EXTRAPOLATE'
+          'BC'       601  1  1      601   301   2    'EXTRAPOLATE'
+          'BC'       1  1  1      601   301   1    'EXTRAPOLATE'
+          'BC'       1  1  2      601   301   2    'EXTRAPOLATE'
+'END BLOCK'    1
+'PRINT'    2
+      1       1          1    1    2  601   1    2      1  1  1
+      1       2         33    1    2    193   34   2     40  1  1
+'PRINT FORCES'  1
+'END'       0
